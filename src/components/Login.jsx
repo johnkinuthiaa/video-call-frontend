@@ -22,13 +22,17 @@ const Login =(()=>{
             },
             body: JSON.stringify(user)
         })
-        if(response.ok){
+        const data =await response.json()
+        if(data.statusCode ===200){
             setModal(true)
-            const data =await response.json()
+
             localStorage.setItem("jwtToken",JSON.stringify(data.jwtToken))
             localStorage.setItem("connectedUser",JSON.stringify(data.user))
             navigate("/home")
 
+        }else{
+            console.log(data)
+            navigate("/login")
         }
 
     })
