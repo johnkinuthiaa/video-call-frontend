@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { ZegoUIKitPrebuilt } from '@zegocloud/zego-uikit-prebuilt';
 
-// const savedUsername =JSON.parse(localStorage.getItem("connectedUser"))
-// console.log(savedUsername.username)
+const savedUsername =JSON.parse(localStorage.getItem("connectedUser"))
+savedUsername?.username
 
 function randomID(len) {
     let result = '';
@@ -45,7 +45,7 @@ export default function VideoCall() {
                     url:
 
                         window.location.protocol + '//' +
-                        window.location.host + window.location.pathname +'?roomID=' +
+                        window.location.host + window.location.pathname +savedUsername?.username+'?roomID=' +
                         roomID,
                 },
             ],
