@@ -164,6 +164,30 @@ div.main {
   margin-bottom: 10px;
   padding: 5px;
 }
+.userList{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  min-height: 200px;
+}
+.userList ul{
+  display: flex;
+  align-items: center;
+  margin: 3px;
+
+}
+svg{
+  margin-top: 3px;
+}
+.user-image{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid rgb(110, 194, 7);
+  align-items: center;
+  margin-right: 3px;
+}
+.userList ul p{
+  text-align: center;
+}
 @media screen and (max-width: 786px){
   .container{
     display: flex;
@@ -174,11 +198,19 @@ div.main {
     max-width: 400px;
     margin-top: 10px;
   }
+  .header{
+    position:relative;
+  }
 
   .image-container{
+    margin-top: 50px;
     padding: 10px;
     max-height: 230px;
     width: 350px;
+  }
+  .root {
+    width: 100vw;
+    height: 100vh;
   }
   img{
     top: 0;
