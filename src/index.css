@@ -188,6 +188,24 @@ svg{
 .userList ul p{
   text-align: center;
 }
+.errorImage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "DejaVu Serif", serif;
+
+}
+.errorImage img{
+  width: fit-content;
+  height: fit-content;
+  position: fixed;
+  top: 0;
+}
+.errorImage p{
+  position: relative;
+  bottom: 0;
+}
 @media screen and (max-width: 786px){
   .container{
     display: flex;
