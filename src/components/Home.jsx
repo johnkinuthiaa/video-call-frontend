@@ -11,6 +11,7 @@ const Home =(()=>{
         const connectedUser =localStorage.getItem("connectedUser")
         const hasJwt=localStorage.getItem("jwtToken")
         users();
+
         if(connectedUser===null &&hasJwt ==null){
             navigate("/")
             return;

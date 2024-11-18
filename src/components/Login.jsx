@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {Link, useNavigate} from 'react-router-dom';
 import SocialIcons from "./SocialIcons.jsx";
 
@@ -8,6 +8,18 @@ const Login =(()=>{
     const [email,setEmail]=useState("")
     const[modal,setModal] =useState(false)
     const navigate =useNavigate()
+
+
+    useEffect(()=>{
+        const connectedUser =localStorage.getItem("connectedUser")
+        const hasJwt=localStorage.getItem("jwtToken")
+
+        if(connectedUser!=null &&hasJwt !=null){
+            navigate("/home")
+            return;
+        }
+
+    },[])
 
     const submitForm =(async ()=> {
         const user = {
